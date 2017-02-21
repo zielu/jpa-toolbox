@@ -1,0 +1,52 @@
+<idea-plugin version="2" url="https://github.com/zielu/GitToolBox">
+  <id>zielu.jpatoolbox</id>
+  <name>JPA ToolBox</name>
+  <version>171.0</version>
+  <vendor url="https://github.com/zielu/jpa-toolbox">Łukasz Zieliński</vendor>
+
+  <description><![CDATA[
+    <h2>Enriches JPA Support with additional features</h2>
+    <div>
+      <a href="https://plugins.jetbrains.com/plugin/XXXX">[Home]</a>
+      <a href="https://github.com/zielu/jpa-toolbox/issues">[Issues]</a>
+    </div><br/>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <h3>Changes is 171.0</h3>
+      <ul>
+        <li>Initial version</li>
+      </ul>
+      ]]>
+  </change-notes>
+
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products -->
+  <depends>com.intellij.modules.ultimate</depends>
+  <depends>com.intellij.database</depends>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="171.2014.21" until-build="171.*"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+    <!--
+    <component>
+      <implementation-class>zielu.gittoolbox.repo.GtRepositoryManager</implementation-class>
+    </component>
+    -->
+  </project-components>
+
+  <actions>
+  </actions>
+
+</idea-plugin>

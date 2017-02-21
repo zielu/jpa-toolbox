@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.2.5"
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: "java"
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+
+
+intellij {
+    version ideaVersion
+    plugins = ['DatabaseTools', 'PersistenceSupport']
+    updateSinceUntilBuild false
+    downloadSources true
+    type ideaType
+}
+
+apply plugin: 'idea'
+idea {
+    project {
+        jdkName = javaVersion
+        languageLevel = javaVersion
+    }
+}
+
+version = "${version}"
+
+dependencies {
+    compile 'org.jodd:jodd-core:3.7.1'
+    compile 'com.google.guava:guava:21.0'
+}
